@@ -67,6 +67,7 @@ GEM
       minitest (>= 5.1)
       tzinfo (~> 2.0)
     amq-protocol (2.3.2)
+    bcrypt (3.1.19)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     builder (3.2.4)
@@ -86,6 +87,9 @@ GEM
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     interactor (3.1.2)
+    interactor-rails (2.2.1)
+      interactor (~> 3.0)
+      rails (>= 4.2)
     io-console (0.6.0)
     irb (1.7.4)
       reline (>= 0.3.6)
@@ -175,10 +179,12 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap
   bunny (>= 2.19.0)
   debug
   interactor (~> 3.0)
+  interactor-rails (~> 2.0)
   pg (~> 1.1)
   pry-rails
   puma (~> 5.0)

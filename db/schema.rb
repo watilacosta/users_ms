@@ -18,7 +18,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_14_025418) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "digest_password"
+    t.string "password_digest", null: false
     t.string "cpf", limit: 11, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
