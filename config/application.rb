@@ -13,5 +13,7 @@ module UsersMs
     config.generators.system_tests = nil
 
     config.api_only = true
+
+    config.active_job.queue_adapter = :sneakers
   end
 end

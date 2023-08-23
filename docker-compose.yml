@@ -27,6 +27,21 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - POSTGRES_DB=rails_app_development
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    restart: always
+  sneakers:
+    networks:
+      events_manager:
+    build:
+      context: .
+      dockerfile: Dockerfile-sneakers
+    environment:
+      RAILS_ENV: development
+    command: bundle exec rails sneakers:run
+    depends_on:
+      - web
+    working_dir: /app
 networks:
   events_manager:
     name: events_manager
